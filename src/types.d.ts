@@ -16,7 +16,8 @@ type Type =
   | "steel"
   | "dragon"
   | "dark"
-  | "fairy";
+  | "fairy"
+  | "bird";
 
 type Pokemon = {
   name: string;

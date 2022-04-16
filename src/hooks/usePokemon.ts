@@ -12,7 +12,16 @@ export function usePokemon() {
 
   const searchPokemon = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    getPokemon(pokemonName).then(({ data }) => setPokemon(mapPokemon(data)));
+    getPokemon(pokemonName)
+      .then(({ data }) => setPokemon(mapPokemon(data)))
+      .catch(() =>
+        setPokemon({
+          name: "MissingNo.",
+          types: ["bird"],
+          sprite:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/MissingNo.png/256px-MissingNo.png"
+        })
+      );
   };
 
   return {
