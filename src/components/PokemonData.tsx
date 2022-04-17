@@ -1,4 +1,6 @@
+import { PokemonName, PokemonSprite } from "../styles/PokemonData";
 import Capitalize from "../utils/capitalize";
+import typeColors from "../constants/typeColors.json";
 
 type Props = {
   pokemon: Pokemon;
@@ -7,11 +9,13 @@ type Props = {
 export default function PokemonData({ pokemon }: Props) {
   return (
     <div>
-      <h3>{Capitalize(pokemon.name)}</h3>
-      <img src={pokemon.sprite} alt={`Sprite de ${pokemon.name}`} />
+      <PokemonName color={typeColors[pokemon.types[0]]}>
+        {Capitalize(pokemon.name)}
+      </PokemonName>
+      <PokemonSprite src={pokemon.sprite} alt={`Sprite de ${pokemon.name}`} />
       <ul>
         {pokemon.types.map(type => {
-          return <li>{Capitalize(type)}</li>;
+          return <li key={type}>{Capitalize(type)}</li>;
         })}
       </ul>
     </div>
