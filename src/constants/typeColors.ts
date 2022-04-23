@@ -17,5 +17,5 @@ export default {
   dragon: "mediumslateBlue",
   dark: "slategrey",
   fairy: "#FF88EE",
-  bird: "#FFFFFF"
+  bird: "#A592D3"
 };
