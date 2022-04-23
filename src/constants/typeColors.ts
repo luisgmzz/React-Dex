@@ -5,7 +5,7 @@ export default {
   grass: "#77C857",
   flying: "#A592D3",
   fighting: "firebrick",
-  poison: "",
+  poison: "purple",
   electric: "yellow",
   ground: "burlywood",
   rock: "#B6A123",
