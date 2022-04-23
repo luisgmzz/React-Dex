@@ -1,3 +1,4 @@
+import { StyledTypesList } from "../styles/PokemonTypes";
 import PokemonType from "./PokemonType";
 
 type Props = {
@@ -6,10 +7,10 @@ type Props = {
 
 export default function PokemonTypes({ types }: Props) {
   return (
-    <ul>
+    <StyledTypesList>
       {types.map(type => {
         return <PokemonType key={type}>{type}</PokemonType>;
       })}
-    </ul>
+    </StyledTypesList>
   );
 }

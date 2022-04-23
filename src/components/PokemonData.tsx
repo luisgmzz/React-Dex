@@ -1,6 +1,6 @@
 import { PokemonName, PokemonSprite } from "../styles/PokemonData";
 import Capitalize from "../utils/capitalize";
-import typeColors from "../constants/typeColors.json";
+import typeColors from "../constants/typeColors";
 import PokemonTypes from "./PokemonTypes";
 
 type Props = {
