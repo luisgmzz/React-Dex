@@ -8,7 +8,7 @@ export default function PokemonTypes({ types }: Props) {
   return (
     <ul>
       {types.map(type => {
-        return <PokemonType>{type}</PokemonType>;
+        return <PokemonType key={type}>{type}</PokemonType>;
       })}
     </ul>
   );
