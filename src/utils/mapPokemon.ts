@@ -6,6 +6,9 @@ export default function mapPokemon(pokemon: apiPokemon): Pokemon {
   return {
     name,
     types: newTypes,
-    sprite: pokemon.sprites.front_default
+    sprites: {
+      front: pokemon.sprites.front_default,
+      back: pokemon.sprites.back_default
+    }
   };
 }

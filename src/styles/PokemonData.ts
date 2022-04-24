@@ -6,7 +6,7 @@ export const StyledDiv = styled.div`
   align-items: center;
 `;
 
-export const PokemonName = styled.h3`
+export const StyledName = styled.h3`
   margin: 20px;
   padding-bottom: 1rem;
   padding-right: 2rem;
@@ -22,7 +22,8 @@ export const PokemonName = styled.h3`
   border: 2.5px solid grey;
   border-radius: 10px;
 `;
-export const PokemonSprite = styled.img`
+
+export const StyledImage = styled.img`
   margin-bottom: 50px;
   width: 25%;
 

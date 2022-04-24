@@ -18,8 +18,11 @@ export function usePokemon() {
         setPokemon({
           name: "MissingNo.",
           types: ["bird"],
-          sprite:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/MissingNo.png/256px-MissingNo.png"
+          sprites: {
+            front:
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/MissingNo.png/256px-MissingNo.png",
+            back: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/MissingNo.png/256px-MissingNo.png"
+          }
         })
       );
   };

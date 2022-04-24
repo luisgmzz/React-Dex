@@ -22,7 +22,10 @@ type Type =
 type Pokemon = {
   name: string;
   types: Type[];
-  sprite: string;
+  sprites: {
+    front: string;
+    back: string;
+  };
 };
 
 type CommonType = {
