@@ -1,5 +1,5 @@
 import { ChangeEventHandler, MouseEventHandler } from "react";
-import { StyledInput } from "../styles/PokemonForm";
+import { StyledButton, StyledForm, StyledInput } from "../styles/PokemonForm";
 
 type Props = {
   handleChange: ChangeEventHandler<HTMLInputElement>;
@@ -8,14 +8,14 @@ type Props = {
 
 export default function PokemonForm({ handleChange, handleClick }: Props) {
   return (
-    <form>
+    <StyledForm>
       <StyledInput
         type="text"
         name="pokemon"
         placeholder="Introduce el nombre del pokemon que desees"
         onChange={handleChange}
       />
-      <button onClick={handleClick}>Buscar</button>
-    </form>
+      <StyledButton onClick={handleClick}>Buscar</StyledButton>
+    </StyledForm>
   );
 }
