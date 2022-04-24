@@ -24,6 +24,7 @@ export const StyledName = styled.h3`
 `;
 
 export const StyledImage = styled.img`
+  cursor: pointer;
   margin-bottom: 50px;
   width: 25%;
 

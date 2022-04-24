@@ -3,6 +3,7 @@ import Capitalize from "../utils/capitalize";
 import typeColors from "../constants/typeColors";
 import PokemonTypes from "./PokemonTypes";
 import PokemonImage from "./PokemonImage";
+import { MouseEvent, useEffect, useState } from "react";
 
 type Props = {
   pokemon: Pokemon;
@@ -15,7 +16,6 @@ export default function PokemonData({ pokemon }: Props) {
         {Capitalize(pokemon.name)}
       </StyledName>
       <PokemonImage images={pokemon.sprites} />
-      {/*  <StyledImage src={pokemon.sprite} alt={`Sprite de ${pokemon.name}`} /> */}
       <PokemonTypes types={pokemon.types} />
     </StyledDiv>
   );
