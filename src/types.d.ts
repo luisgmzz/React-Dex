@@ -28,6 +28,12 @@ type Pokemon = {
   };
 };
 
+type Images = {
+  front: string;
+  back: string;
+};
+
+// Api Types
 type CommonType = {
   name: string;
   url: string;
