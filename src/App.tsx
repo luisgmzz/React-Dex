@@ -1,14 +1,15 @@
-import PokemonData from "./components/PokemonData";
-import PokemonForm from "./components/PokemonForm";
-import { usePokemon } from "./hooks/usePokemon";
+import PokemonFinder from "./pages/PokemonFinder";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import PokemonGuesser from "./pages/PokemonGuesser";
 
 function App() {
-  const { pokemon, searchPokemon, updateName } = usePokemon();
-
   return (
     <div className="App">
-      <PokemonForm handleChange={updateName} handleClick={searchPokemon} />
-      {pokemon && <PokemonData pokemon={pokemon} />}
+      <Routes>
+        <Route path="/find" element={<PokemonFinder />} />
+        <Route path="/guess" element={<PokemonGuesser />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </div>
   );
 }
