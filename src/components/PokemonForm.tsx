@@ -12,7 +12,7 @@ export default function PokemonForm({ handleChange, handleClick }: Props) {
       <StyledInput
         type="text"
         name="pokemon"
-        placeholder="Introduce el nombre del pokemon que desees"
+        placeholder="Introduce el nombre o id del pokemon que desees"
         onChange={handleChange}
       />
       <StyledButton onClick={handleClick}>Buscar</StyledButton>
