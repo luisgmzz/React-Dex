@@ -1,9 +1,8 @@
-import { StyledName, StyledImage, StyledDiv } from "../styles/PokemonData";
+import { StyledName, StyledDiv } from "../styles/PokemonData";
 import Capitalize from "../utils/capitalize";
 import typeColors from "../constants/typeColors";
 import PokemonTypes from "./PokemonTypes";
 import PokemonImage from "./PokemonImage";
-import { MouseEvent, useEffect, useState } from "react";
 
 type Props = {
   pokemon: Pokemon;

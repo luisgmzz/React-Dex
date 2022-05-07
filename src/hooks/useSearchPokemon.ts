@@ -2,7 +2,7 @@ import { ChangeEvent, MouseEvent, useState } from "react";
 import getPokemon from "../services/getPokemon";
 import mapPokemon from "../utils/mapPokemon";
 
-export function usePokemon() {
+export function useSearchPokemon() {
   const [pokemon, setPokemon] = useState<Pokemon>();
   const [pokemonName, setPokemonName] = useState("");
 
@@ -13,7 +13,7 @@ export function usePokemon() {
   const searchPokemon = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     getPokemon(pokemonName)
-      .then(({ data }) => setPokemon(mapPokemon(data)))
+      .then(pokemon => setPokemon(mapPokemon(pokemon)))
       .catch(() =>
         setPokemon({
           name: "MissingNo.",

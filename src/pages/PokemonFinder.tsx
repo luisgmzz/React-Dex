@@ -1,9 +1,9 @@
 import PokemonData from "../components/PokemonData";
 import PokemonForm from "../components/PokemonForm";
-import { usePokemon } from "../hooks/usePokemon";
+import { useSearchPokemon } from "../hooks/useSearchPokemon";
 
 export default function PokemonFinder() {
-  const { pokemon, searchPokemon, updateName } = usePokemon();
+  const { pokemon, searchPokemon, updateName } = useSearchPokemon();
   return (
     <>
       <PokemonForm handleChange={updateName} handleClick={searchPokemon} />
