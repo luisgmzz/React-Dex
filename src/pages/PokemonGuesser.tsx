@@ -20,7 +20,6 @@ export default function PokemonGuesser() {
     console.log(pokemon?.name);
   };
 
-  pokemon && console.log(pokemon.types);
   const hints = pokemon && [
     { name: "Primera letra", hint: pokemon.name[0] },
     {
