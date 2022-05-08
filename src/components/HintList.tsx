@@ -1,14 +1,19 @@
 import Hint from "./Hint";
 
 type Props = {
-  hints: string[];
+  hints: {
+    name: string;
+    hint: string;
+  }[];
 };
 
 export default function HintList({ hints }: Props) {
   return (
     <ul>
-      {hints.map((child, index) => (
-        <Hint order={index}>{child}</Hint>
+      {hints.map(({ name, hint }, index) => (
+        <Hint key={index} name={name}>
+          {hint}
+        </Hint>
       ))}
     </ul>
   );

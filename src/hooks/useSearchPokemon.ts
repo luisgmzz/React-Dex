@@ -13,7 +13,7 @@ export function useSearchPokemon() {
   const searchPokemon = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     getPokemon(pokemonName)
-      .then(pokemon => setPokemon(mapPokemon(pokemon)))
+      .then(setPokemon)
       .catch(() =>
         setPokemon({
           name: "MissingNo.",

@@ -1,17 +1,16 @@
 import { MouseEvent, PropsWithChildren, useState } from "react";
+import useBoolean from "../hooks/useBoolean";
 
 type Props = {
-  order: number;
+  name: string;
 };
 
-export default function Hint({ order, children }: PropsWithChildren<Props>) {
-  const [visible, setVisible] = useState(false);
-  const handleClick = (e: MouseEvent<HTMLLIElement>) => {
-    setVisible(prevVisible => !prevVisible);
-  };
+export default function Hint({ name, children }: PropsWithChildren<Props>) {
+  const { bool: visible, toggleBool: toggleVisibility } = useBoolean(false);
+
   return visible ? (
     <li>{children}</li>
   ) : (
-    <li onClick={handleClick}>Hint {order + 1}</li>
+    <li onClick={toggleVisibility}>{name}</li>
   );
 }
