@@ -33,13 +33,13 @@ export default function PokemonGuesser() {
     }
   ];
 
-  return (
-    pokemon && (
-      <StyledDiv>
-        <GuesserForm handleChange={updateName} handleClick={compareNames} />
-        <PokemonTypes types={pokemon.types} />
-        <HintList hints={hints!} />
-      </StyledDiv>
-    )
+  return pokemon ? (
+    <StyledDiv>
+      <GuesserForm handleChange={updateName} handleClick={compareNames} />
+      <PokemonTypes types={pokemon.types} />
+      <HintList hints={hints!} />
+    </StyledDiv>
+  ) : (
+    <StyledDiv>Loading...</StyledDiv>
   );
 }
