@@ -38,8 +38,8 @@ export default function PokemonGuesser() {
     pokemon && (
       <StyledDiv>
         <GuesserForm handleChange={updateName} handleClick={compareNames} />
-        <HintList hints={hints!} />
         <PokemonTypes types={pokemon.types} />
+        <HintList hints={hints!} />
       </StyledDiv>
     )
   );
