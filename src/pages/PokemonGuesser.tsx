@@ -4,7 +4,6 @@ import HintList from "../components/HintList";
 import PokemonTypes from "../components/PokemonTypes";
 import useGetRandomPokemon from "../hooks/useGetRandomPokemon";
 import { StyledDiv } from "../styles/PokemonData";
-import { StyledButton, StyledInput } from "../styles/PokemonForm";
 
 export default function PokemonGuesser() {
   const [name, setName] = useState("");
