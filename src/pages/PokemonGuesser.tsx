@@ -1,18 +1,21 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, MouseEvent, useState } from "react";
+import GuesserForm from "../components/GuesserForm";
 import HintList from "../components/HintList";
 import PokemonTypes from "../components/PokemonTypes";
 import useGetRandomPokemon from "../hooks/useGetRandomPokemon";
+import { StyledDiv } from "../styles/PokemonData";
 import { StyledButton, StyledInput } from "../styles/PokemonForm";
 
 export default function PokemonGuesser() {
   const [name, setName] = useState("");
   const pokemon = useGetRandomPokemon();
 
-  const compareNames = () =>
+  const compareNames = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     name.toLowerCase() === pokemon?.name
       ? alert("Acertaste")
       : alert("Fallaste");
-
+  };
   const updateName = ({ target }: ChangeEvent<HTMLInputElement>) => {
     setName(target.value);
     console.log(pokemon?.name);
@@ -33,16 +36,11 @@ export default function PokemonGuesser() {
 
   return (
     pokemon && (
-      <div>
-        <StyledInput
-          type="text"
-          placeholder="Inserta el nombre del pokemon"
-          onChange={updateName}
-        />
-        <StyledButton onClick={compareNames}>Click</StyledButton>
+      <StyledDiv>
+        <GuesserForm handleChange={updateName} handleClick={compareNames} />
         <HintList hints={hints!} />
         <PokemonTypes types={pokemon.types} />
-      </div>
+      </StyledDiv>
     )
   );
 }
