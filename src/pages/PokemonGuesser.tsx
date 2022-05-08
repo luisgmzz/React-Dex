@@ -21,13 +21,13 @@ export default function PokemonGuesser() {
   };
 
   const hints = pokemon && [
-    { name: "Primera letra", hint: pokemon.name[0] },
+    { name: "First letter", hint: pokemon.name[0] },
     {
-      name: "Ultima letra",
+      name: "Last letter",
       hint: pokemon.name[pokemon.name.length - 1]
     },
     {
-      name: "Resto del nombre",
+      name: "Rest of the name",
       hint: pokemon.name.slice(1, pokemon.name.length - 1)
     }
   ];
