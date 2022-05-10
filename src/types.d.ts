@@ -20,12 +20,14 @@ type Type =
   | "bird";
 
 type Pokemon = {
+  id: number;
   name: string;
   types: Type[];
   sprites: {
     front: string;
     back: string;
   };
+  generation: number;
 };
 
 type Images = {

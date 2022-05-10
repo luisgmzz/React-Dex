@@ -5,7 +5,6 @@ export function getRandomNumber(min: number, max?: number) {
 }
 
 export function getRandomNumberFromRanges(ranges: number[]) {
-  // [151, 100, 135, 107, 156, 72, 86, 81]
   const randomIndex = getRandomNumber(ranges.length);
   const randomRange = ranges[randomIndex];
 
