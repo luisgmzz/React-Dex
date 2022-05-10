@@ -16,13 +16,15 @@ export function useSearchPokemon() {
       .then(setPokemon)
       .catch(() =>
         setPokemon({
+          id: 0,
           name: "MissingNo.",
           types: ["bird"],
           sprites: {
             front:
               "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/MissingNo.png/256px-MissingNo.png",
             back: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/MissingNo.png/256px-MissingNo.png"
-          }
+          },
+          generation: 0
         })
       );
   };
