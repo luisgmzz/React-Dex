@@ -11,10 +11,10 @@ export default function GuesserForm({ handleChange, handleClick }: Props) {
     <StyledForm>
       <StyledInput
         type="text"
-        placeholder="Inserta el nombre del pokemon"
+        placeholder="Insert the name of the pokemon"
         onChange={handleChange}
       />
-      <StyledButton onClick={handleClick}>Click</StyledButton>
+      <StyledButton onClick={handleClick}>Guess</StyledButton>
     </StyledForm>
   );
 }
