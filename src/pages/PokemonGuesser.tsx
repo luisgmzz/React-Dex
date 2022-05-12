@@ -25,12 +25,12 @@ export default function PokemonGuesser() {
   const hints = pokemon && [
     { name: "Pokemon's Generation", hint: "" + pokemon.generation },
     {
-      name: "Last letter",
-      hint: pokemon.name[pokemon.name.length - 1]
+      name: "First letter",
+      hint: pokemon.name[0]
     },
     {
       name: "Rest of the name",
-      hint: pokemon.name.slice(1, pokemon.name.length - 1)
+      hint: pokemon.name.slice(1)
     }
   ];
 
