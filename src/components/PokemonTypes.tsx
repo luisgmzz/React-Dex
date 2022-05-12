@@ -6,7 +6,6 @@ type Props = {
 };
 
 export default function PokemonTypes({ types }: Props) {
-  console.log(typeof types[0]);
   return (
     <StyledTypesList>
       {types.map(type => {

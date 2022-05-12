@@ -119,3 +119,8 @@ type apiPokemon = {
   }[];
   weight: number;
 };
+
+type Guess = {
+  name: string;
+  correct: boolean;
+};

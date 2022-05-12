@@ -1,13 +1,20 @@
+import {
+  StyledGuessedLi,
+  StyledGuessedList
+} from "../styles/AlreadyGuessedList";
+
 type Props = {
-  list: string[];
+  list: Guess[];
 };
 
 export default function AlreadyGuessedList({ list }: Props) {
   return (
-    <ul>
-      {list.map((el, index) => (
-        <li key={index}>{el}</li>
+    <StyledGuessedList>
+      {list.map(({ name, correct }, index) => (
+        <StyledGuessedLi correct={correct} key={index}>
+          {name}
+        </StyledGuessedLi>
       ))}
-    </ul>
+    </StyledGuessedList>
   );
 }
