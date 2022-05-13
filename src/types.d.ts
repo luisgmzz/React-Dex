@@ -1,3 +1,7 @@
+interface String {
+  capitalize(): string;
+}
+
 type Type =
   | "normal"
   | "fire"
