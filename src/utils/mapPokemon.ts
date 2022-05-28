@@ -6,9 +6,7 @@ export default function mapPokemon({
   sprites,
   id
 }: apiPokemon): Pokemon {
-  const newTypes: Type[] = [];
-
-  types.map(({ slot, type }) => (newTypes[slot - 1] = type.name as Type));
+  const newTypes: Type[] = types.map(({ type }) => type.name as Type);
   return {
     id,
     name,
