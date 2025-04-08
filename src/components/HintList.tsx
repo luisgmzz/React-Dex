@@ -1,3 +1,4 @@
+import { StyledHintsList } from "../styles/Hints";
 import Hint from "./Hint";
 
 type Props = {
@@ -9,12 +10,12 @@ type Props = {
 
 export default function HintList({ hints }: Props) {
   return (
-    <ul>
+    <StyledHintsList>
       {hints.map(({ name, hint }, index) => (
         <Hint key={index} name={name}>
           {hint}
         </Hint>
       ))}
-    </ul>
+    </StyledHintsList>
   );
 }

@@ -13,6 +13,7 @@ export const StyledForm = styled.form`
   button {
     flex-grow: 0;
   }
+  margin-bottom: 3vh;
 `;
 
 export const StyledInput = styled.input`
