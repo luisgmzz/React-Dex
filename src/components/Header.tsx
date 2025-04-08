@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { StyledHeader } from "../styles/Wrappers";
 import NavLink from "./NavLink";
 
