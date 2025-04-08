@@ -14,15 +14,20 @@ export const StyledHeader = styled.header`
     li {
       display: inline;
       margin: 1em;
-      font-size: 1.5em;
-      font-weight: 500;
-
+      
       a {
         color: #ffde00;
-        -webkit-text-stroke: 1.9px #3b4cca;
+        -webkit-text-stroke: .15vw #3b4cca;
         font-family: "Pokemon Solid", sans-serif;
         letter-spacing: 0px;
+        font-size: 2vw;
+        font-weight: 500;
+        @media (max-width: 500px) {
+          font-size: 25px;
+          -webkit-text-stroke: 1.75px #3b4cca;
+        }
       }
+
     }
   }
 `;

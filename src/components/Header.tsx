@@ -17,7 +17,7 @@ export default function Header() {
     <StyledHeader>
       <nav>
         <ul>
-          {routes.map(({name, route}) => <NavLink route={route}>{name}</NavLink>)}
+          {routes.map(({name, route}, i) => <NavLink key={i} route={route}>{name}</NavLink>)}
         </ul>
       </nav>
     </StyledHeader>

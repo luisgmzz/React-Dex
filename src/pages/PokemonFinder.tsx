@@ -7,7 +7,7 @@ export default function PokemonFinder() {
   return (
     <>
       <PokemonForm handleChange={updateName} handleClick={searchPokemon} />
-      {pokemon && <PokemonData pokemon={pokemon} />};
+      {pokemon && <PokemonData pokemon={pokemon} />}
     </>
   );
 }

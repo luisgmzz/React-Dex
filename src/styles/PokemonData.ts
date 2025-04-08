@@ -12,7 +12,7 @@ export const StyledName = styled.h3`
   padding-right: 2rem;
   padding-left: 2rem;
 
-  font-size: 200%;
+  font-size: 3vw;
   font-family: "Pokemon Solid", sans-serif;
   letter-spacing: 3px;
   color: white;
@@ -26,7 +26,7 @@ export const StyledName = styled.h3`
 export const StyledImage = styled.img`
   cursor: pointer;
   margin-bottom: 50px;
-  width: 25%;
+  width: 17vw;
 
   background-color: #a1c9f0;
   border: 2px solid #50515a;
