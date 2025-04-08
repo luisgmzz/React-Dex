@@ -2,6 +2,10 @@ interface String {
   capitalize(): string;
 }
 
+interface Array<T> {
+  toReversed(): Array<T>;
+}
+
 type Type =
   | "normal"
   | "fire"
