@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <StyledFooter>
         <p>
-            ReactDex
+            ReactDex - By Luis Gómez
         </p>
     </StyledFooter>
   );

@@ -45,18 +45,21 @@ export const StyledHeader = styled.header`
 export const StyledFooter = styled.footer`
   background-color: #f00000;
   margin-top: 3vh;
-  
+
   p {
     font-family: "Pokemon Solid", sans-serif;
     
     color: #ffde00;
-    -webkit-text-stroke: .1vw #3b4cca;
+    -webkit-text-stroke: .15vw #3b4cca;
     
     font-size: 2vw;
     font-weight: 500;
     
     text-align: center;
-    padding: 20px 0;
-    font-size: 1rem;
+
+    @media (max-width: 500px) {
+          font-size: 25px;
+          -webkit-text-stroke: 1.75px #3b4cca;
+        }
   }
 `

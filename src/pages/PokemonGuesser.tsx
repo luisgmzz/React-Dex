@@ -15,7 +15,7 @@ export default function PokemonGuesser() {
   const compareNames = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     // name.toLowerCase() === pokemon?.name && alert("acertaste");
-    addItem({ name, correct: name === pokemon?.name });
+    addItem({ name, correct: name.capitalize() === pokemon?.name?.capitalize() });
   };
 
   const updateName = ({ target }: ChangeEvent<HTMLInputElement>) => {
