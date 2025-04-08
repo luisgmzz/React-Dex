@@ -6,6 +6,7 @@ import PokemonTypes from "../components/PokemonTypes";
 import useGetRandomPokemon from "../hooks/useGetRandomPokemon";
 import { useList } from "../hooks/useList";
 import { StyledDiv } from "../styles/PokemonData";
+import { StyledWelcome } from "../styles/WelcomePage";
 
 export default function PokemonGuesser() {
   const [name, setName] = useState("");
@@ -23,7 +24,7 @@ export default function PokemonGuesser() {
   };
 
   const hints = pokemon && [
-    { name: "Pokemon's Generation", hint: "" + pokemon.generation },
+    { name: "Debut Generation", hint: "" + pokemon.generation },
     {
       name: "First letter",
       hint: pokemon.name[0]
@@ -42,6 +43,8 @@ export default function PokemonGuesser() {
       <AlreadyGuessedList list={list.toReversed()} />
     </StyledDiv>
   ) : (
-    <StyledDiv>Loading...</StyledDiv>
+    <StyledWelcome>
+      Loading...
+    </StyledWelcome>
   );
 }
