@@ -14,7 +14,7 @@ export default function PokemonGuesser() {
 
   const compareNames = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    name.toLowerCase() === pokemon?.name && alert("acertaste");
+    // name.toLowerCase() === pokemon?.name && alert("acertaste");
     addItem({ name, correct: name === pokemon?.name });
   };
 
@@ -39,7 +39,7 @@ export default function PokemonGuesser() {
       <GuesserForm handleChange={updateName} handleClick={compareNames} />
       <PokemonTypes types={pokemon.types} />
       <HintList hints={hints!} />
-      <AlreadyGuessedList list={list} />
+      <AlreadyGuessedList list={list.toReversed()} />
     </StyledDiv>
   ) : (
     <StyledDiv>Loading...</StyledDiv>

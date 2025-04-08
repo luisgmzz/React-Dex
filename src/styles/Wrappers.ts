@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+export const MainContent = styled.main`
+  flex: 1;
+`;
+
 export const StyledHeader = styled.header`
   margin: 0;
   background-color: #f00000;
@@ -31,3 +41,22 @@ export const StyledHeader = styled.header`
     }
   }
 `;
+
+export const StyledFooter = styled.footer`
+  background-color: #f00000;
+  margin-top: 3vh;
+  
+  p {
+    font-family: "Pokemon Solid", sans-serif;
+    
+    color: #ffde00;
+    -webkit-text-stroke: .1vw #3b4cca;
+    
+    font-size: 2vw;
+    font-weight: 500;
+    
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+  }
+`
